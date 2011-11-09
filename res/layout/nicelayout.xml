@@ -1,0 +1,70 @@
+
+<LinearLayout android:id="@+id/LinearLayout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical">
+	<RelativeLayout android:id="@+id/relativeLayout2"
+		android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_height="44dip" android:background="@drawable/bg_header">
+		<TextView android:id="@+id/textView1" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_centerInParent="true"
+			style="@style/text_h1" android:text="Twitter downloader"></TextView>
+	</RelativeLayout>
+	<RelativeLayout android:padding="10dip" android:id="@+id/relativeLayout1"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:background="@drawable/bg_app">
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:clickable="true"
+			android:onClick="downloadUserInfo" android:text="Download"
+			android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+			android:id="@+id/btnDownload"></Button>
+		<AutoCompleteTextView android:layout_height="wrap_content"
+			android:id="@+id/actxtvUsername" android:layout_toRightOf="@+id/btnDownload"
+			android:layout_width="fill_parent" android:inputType="text"
+			android:hint="Twitter username..." android:layout_alignParentTop="true" android:completionThreshold="1"></AutoCompleteTextView>
+
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/txtvUserNameTitle"
+			android:layout_below="@+id/btnDownload" android:layout_marginTop="10dip"
+			android:text="Username" style="@style/text_p"></TextView>
+		<TextView android:layout_height="wrap_content" android:text="TextView"
+			android:layout_width="wrap_content" android:id="@+id/txtvUserName"
+			android:layout_alignBaseline="@+id/txtvUserNameTitle"
+			android:layout_alignParentRight="true" style="@style/text_p"></TextView>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/txtvUrlTitle"
+			android:layout_below="@+id/txtvUserNameTitle"
+			android:layout_marginTop="10dip" android:text="Website" style="@style/text_p"></TextView>
+		<TextView android:layout_height="wrap_content" android:text="TextView"
+			android:layout_width="wrap_content" android:id="@+id/txtvUrl"
+			android:layout_alignBaseline="@+id/txtvUrlTitle"
+			android:layout_alignParentRight="true" style="@style/text_p"></TextView>
+
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/txtvFavouritesCountTitle"
+			android:layout_below="@+id/txtvUrlTitle" android:layout_marginTop="10dip"
+			android:text="Favourite tweets" style="@style/text_p"></TextView>
+		<TextView android:layout_height="wrap_content" android:text="TextView"
+			android:layout_width="wrap_content" android:id="@+id/txtvFavouritesCount"
+			android:layout_alignParentRight="true" style="@style/text_p"
+			android:layout_alignBaseline="@+id/txtvFavouritesCountTitle"></TextView>
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:id="@+id/txtvDescriptionTitle"
+			android:layout_below="@+id/txtvFavouritesCountTitle"
+			android:layout_marginTop="10dip" android:text="Bio" style="@style/text_p"></TextView>
+		<TextView android:layout_height="wrap_content" android:text="TextView"
+			android:layout_width="fill_parent" android:id="@+id/txtvDescription"
+			android:layout_below="@+id/txtvDescriptionTitle"
+			android:layout_marginTop="10dip" android:layout_marginLeft="10dip"
+			style="@style/text_p"></TextView>
+
+		<Button android:id="@+id/btnTweets" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Tweets"
+			android:layout_below="@+id/txtvDescription" android:layout_marginTop="10dip"
+			android:layout_alignLeft="@+id/btnDownload"
+			android:layout_alignRight="@+id/btnDownload" android:onClick="showTweets"></Button>
+
+
+	</RelativeLayout>
+</LinearLayout>

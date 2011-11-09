@@ -1,0 +1,14 @@
+
+<LinearLayout android:id="@+id/LinearLayout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical">
+	<RelativeLayout android:id="@+id/relativeLayout2"
+		android:layout_width="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_height="44dip" android:background="@drawable/bg_header">
+		<TextView android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:layout_centerInParent="true"
+			style="@style/text_h1" android:id="@+id/txtvTitle"></TextView>
+	</RelativeLayout>
+	<ListView android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/bg_app" android:id="@+id/lvTweets"></ListView>
+</LinearLayout>
